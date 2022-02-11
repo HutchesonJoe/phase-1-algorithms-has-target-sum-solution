@@ -1,14 +1,38 @@
-function hasTargetSum(array, target) {
-  // Write your algorithm here
+function hasTargetSum(array, target){
+  const seenNumbers = {}
+
+  for (const number of array){
+    const comp = target - number;
+    if(comp in seenNumbers) return true;
+    seenNumbers[number] = true
+  }
+  return false
 }
 
 /* 
-  Write the Big O time complexity of your function here
+Runtime: O(n) 
+Space: 0(n)
 */
 
+
+
+function hasTargetSum(array, target){
+  const seenNumbers = {}
+
+  for (const number of array){
+    const comp = target - number;
+    if(comp in seenNumbers) return true;
+    seenNumbers[number] = true
+  }
+  return false
+}
+
 /* 
-  Add your pseudocode here
-*/
+for each item in the array
+    add number to the remaining items in the array
+    compare each sum to the target number
+    if the numbers are equal
+      return true*/
 
 /*
   Add written explanation of your solution here
